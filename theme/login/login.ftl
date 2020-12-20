@@ -56,11 +56,20 @@
         </#if>
     <#elseif section = "info" >
         <#if realm.password && social.providers??>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <div class="kc-form-title">${msg("oauthLogin")}</div>
             <div id="kc-social-providers">
                 <ul>
                     <#list social.providers as p>
-                        <li><a href="${p.loginUrl}" id="zocial-${p.alias}" class="zocial ${p.providerId}"> <span class="text">${p.displayName}</span></a></li>
+                            <#if p.providerId = "facebook">
+                            <a href="${p.loginUrl}" id="zocial-${p.alias}" class="fa fa-facebook"></a>
+                             <#elseif p.providerId = "google">
+                            <a href="${p.loginUrl}" id="zocial-${p.alias}" class="fa fa-google"></a>
+                            <#elseif p.providerId = "github">
+                            <a href="${p.loginUrl}" id="zocial-${p.alias}" class="fa fa-github"></a>
+                            <#else>
+                            <a href="${p.loginUrl}" id="zocial-${p.alias}" class="zocial ${p.providerId}"> <span class="text">${p.displayName}</span></a>
+                            </#if>
                     </#list>
                 </ul>
             </div>
