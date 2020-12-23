@@ -11,18 +11,21 @@
             <form id="kc-form-login" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
                 <div class="${properties.kcFormGroupClass!}">
                     <div class="kc-form-title">${msg("passwordLogin")}</div>
-                    <div class="${properties.kcInputWrapperClass!}">
+                    <div class="${properties.kcInputWrapperClass!} textbox">
                         <#if usernameEditDisabled??>
                             <input id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}" type="text" disabled />
+                            <i class="notranslate secondary-text material-icons md-24" aria-hidden="true" data-mat-icon-type="font">mail</i>
                         <#else>
                             <input id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}" type="text" autofocus autocomplete="off" placeholder="<#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if>" />
+                            <i class="notranslate secondary-text material-icons md-24" aria-hidden="true" data-mat-icon-type="font">mail</i>
                         </#if>
                     </div>
                 </div>
 
                 <div class="${properties.kcFormGroupClass!}">
-                    <div class="${properties.kcInputWrapperClass!}">
-                        <input id="password" class="${properties.kcInputClass!}" name="password" type="password" autocomplete="off" placeholder="Password" />
+                    <div class="${properties.kcInputWrapperClass!} textbox">
+                        <input id="password" class="${properties.kcInputClass!}" name="password" type="password" autocomplete="off" placeholder='${msg("passwordPlaceHolder")}' />
+                        <i class="material-icons md-24">vpn_key</i>
                     </div>
                 </div>
 
