@@ -11,8 +11,9 @@
             <div class="${properties.kcFormGroupClass!}">
                 <div class="kc-form-title">${msg("passwordRecover")}</div>
 
-                <div class="${properties.kcInputWrapperClass!}">
+                <div class="${properties.kcInputWrapperClass!} textbox">
                     <input type="text" id="username" name="username" class="${properties.kcInputClass!}" autofocus placeholder="<#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if>"/>
+                    <i class="notranslate secondary-text material-icons md-24" aria-hidden="true" data-mat-icon-type="font">mail</i>
                 </div>
             </div>
 
