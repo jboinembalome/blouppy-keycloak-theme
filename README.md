@@ -8,7 +8,7 @@ A Keycloak theme for Blouppy App.
 <img src="./screenshots/forgot-password.png">
 
 ## Overview
-This is an **incomplete** Keycloak login theme. Currently, this theme styles the "login", "register", and "forgot password" screens.  More layouts may be included in the future depending on demand.
+This is an **incomplete** Keycloak login theme. Currently, this theme styles the "login", "register", and "forgot password" screens.  More layouts may be included in the future.
 
 ## Installation
 
